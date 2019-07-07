@@ -12,5 +12,20 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(string => string.split(" ").map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(" "))
 }
+
+
+// 1. split my strings up by space
+// 2. go into the first index and capitalize it
+// 3. make sure to attach the rest of my string to newly capitalized letter
+// 4. then join each string together
+// const titleCased = () => {
+//   return tutorials.map(string => {
+//     let stringSplit = string.split(" ");
+//     let strUpper = stringSplit.map(word =>
+//       word.charAt(0).toUpperCase() + word.substring(1)
+//     )
+//   return strUpper.join(" ")
+//   })
+// }
